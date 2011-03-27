@@ -1,7 +1,25 @@
-Commerce Kickstart is an installation profile designed to get up and running
-quickly with Drupal Commerce. It duplicates a standard Drupal installation and
-provides additional configuration for Commerce modules and components. While we
-intend for this installation profile to be the entrance point for many new users
-to Drupal Commerce, we will also be maintaining drush make files and eventual
-Features integration to make it a starting point for advanced Drupal users to
-quickly build out new e-commerce sites.
+;Commerce Kickstart is an installation profile designed to get up and running
+;quickly with Drupal Commerce. It duplicates a standard Drupal installation and
+;provides additional configuration for Commerce modules and components. While we
+;intend for this installation profile to be the entrance point for many new users
+;to Drupal Commerce, we will also be maintaining drush make files and eventual
+;Features integration to make it a starting point for advanced Drupal users to
+;quickly build out new e-commerce sites.
+
+; Use this file to build a full distribution including Drupal core and the
+; Commerce File install profile using the following command:
+;
+; drush make README <target directory>
+
+api = 2
+core = 7.x
+
+projects[drupal][type] = core
+projects[drupal][version] = "7"
+
+; Add Commerce File to the full distribution build.
+projects[commerce_file][type] = profile
+projects[commerce_file][version] = 1.x-dev
+projects[commerce_file][download][type] = git
+projects[commerce_file][download][url] = git://github.com/EclipseGc/Commerce-File.git
+projects[commerce_file][download][branch] = 7.x-1.x
