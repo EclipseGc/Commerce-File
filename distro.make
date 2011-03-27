@@ -13,5 +13,5 @@ projects[drupal][version] = "7"
 projects[commerce_file][type] = profile
 projects[commerce_file][version] = 1.x-dev
 projects[commerce_file][download][type] = git
-projects[commerce_file][download][url] = http://git.drupal.org/project/commerce_kickstart.git
+projects[commerce_file][download][url] = git://github.com/EclipseGc/Commerce-File.git
 projects[commerce_file][download][branch] = 7.x-1.x
